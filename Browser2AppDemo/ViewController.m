@@ -10,6 +10,10 @@
 #import "UINavigationController+Extras.h"
 #import <khenshin/khenshin.h>
 
+#define KH_AUTOMATON_API_URL @"https://khipu.com/app/2.0"
+#define KH_CEREBRO_URL @"https://khipu.com/cerebro"
+
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *URLTextField;
 
@@ -25,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self.URLTextField setText:@"https://khipu.com/payment/simplified/ivudvbuomp3i"];
+
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Bar Logo"]];
 }
 
@@ -65,6 +69,8 @@
         [KhenshinInterface initWithNavigationBarCenteredLogo:[UIImage imageNamed:@"Bar Logo"]
                                    NavigationBarLeftSideLogo:[[UIImage alloc] init]
                                         tecnologyInsideImage:[[UIImage alloc] init]
+                                             automatonAPIURL:[self safeURLWithString:KH_AUTOMATON_API_URL]
+                                               cerebroAPIURL:[self safeURLWithString:KH_CEREBRO_URL]
                                            andPrincipalColor:[UIColor colorWithRed:1.0
                                                                              green:0.0
                                                                               blue:16.0/255.0
@@ -82,6 +88,11 @@
                                                         NSLog(@"Retornamos con URL: %@", [returnURL absoluteString]);
                                                     }];
     }
+}
+
+- (NSURL *) safeURLWithString:(NSString *)URLString {
+    
+    return [NSURL URLWithString:[URLString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
 }
 
 @end
