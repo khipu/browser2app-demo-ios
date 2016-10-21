@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
+    
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Bar Logo"]];
 }
 
@@ -68,7 +68,7 @@
         
         [KhenshinInterface initWithNavigationBarCenteredLogo:[UIImage imageNamed:@"Bar Logo"]
                                    NavigationBarLeftSideLogo:[[UIImage alloc] init]
-                                        tecnologyInsideImage:[[UIImage alloc] init]
+                                       technologyInsideImage:[[UIImage alloc] init]
                                              automatonAPIURL:[self safeURLWithString:KH_AUTOMATON_API_URL]
                                                cerebroAPIURL:[self safeURLWithString:KH_CEREBRO_URL]
                                            andPrincipalColor:[UIColor colorWithRed:1.0

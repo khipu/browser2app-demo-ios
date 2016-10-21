@@ -19,11 +19,6 @@ Valida que tu proyecto tenga configurada la bandera -Objc
 
 > Project -> Build Settings -> Other Linker Flags -> *-Objc*
 
-## Add No Bitcode  
-khenshin 1.1 no tiene habilitado Bitcode por lo que tendrás que deshabilitarlo en tu proyecto
-
-> Project -> Build Settings -> Enable Bitcode -> *No*
-
 # Configuración 
 ## Recursos
 En *ViewController.m* puedes ver la inicialización de **khenshin**, la cual  requiere:  
