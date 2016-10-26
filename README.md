@@ -2,7 +2,9 @@
 Version 1.1  
 Build 10
 
-Esta aplicación ha sido creada para demostrar la utilización de nuestra biblioteca khenshin. Para poder ejecutar esta aplicación es necesario que tengas acceso a nuestro repositorio privado: *https://bitbucket.org/khipu/khenshin-pod.git*
+Esta aplicación ha sido creada para demostrar la utilización de nuestra biblioteca khenshin. Para poder ejecutar esta aplicación es necesario que tengas acceso a nuestro repositorio privado(*): *https://bitbucket.org/khipu/khenshin-pod.git*
+
+(*) Éstos datos serán entregados por tu *ejecutiva* ***Browser2App***
 
 ## Frameworks
 * libxml2. Es necesario agregar esta biblioteca a tu proyecto antes de compilar con khenshin
@@ -10,7 +12,7 @@ Esta aplicación ha sido creada para demostrar la utilización de nuestra biblio
 ## Cocoapod
 Para instalar khenshin en tu proyecto es necesario utilizar cocoapods.
 > **Archivo Podfile**  
-> pod 'khenshin', :git => 'https://bitbucket.org/khipu/khenshin-pod.git', :tag => '1.5'
+> pod 'khenshin', :git => 'https://bitbucket.org/khipu/khenshin-pod.git', :tag => '1.7'
 
 *Importante* **use_frameworks!**
 
@@ -26,13 +28,15 @@ En *ViewController.m* puedes ver la inicialización de **khenshin**, la cual  re
 * **NavigationBarCenteredLogo**: imagen para ubicarla al centro de la barra de navegación durante la inicialización.  
 * **NavigationBarLeftSideLogo**: imagen para ubicarla a la izquierda de la barra de navegación en caso que se habilite **"Mira Como Funciona"**.  
 * **TechnologyInsideImage**: En caso que quieras agregar tu logo durante el proceso de pago. Para ubicarlo en la zona inferior izquierda durante el proceso de pago.
-* **AutomatonURL**: dirección URL para descargar los autómatas.
-* **CerebroURL**: dirección URL para informar de progreso de pago.
+* **AutomatonURL**: dirección URL para descargar los autómatas(*).
+* **CerebroURL**: dirección URL para informar de progreso de pago(*).
 * **Color principal**: Para pintar la barra de navegación.
 
 **En esta versión, si no quieres utilizar imágenes puedes asignar una imagen vacía**
 
 > [[UIImage alloc] init]
+
+(*) Éstos datos serán entregados por tu *ejecutiva* ***Browser2App***
 
 ## Parámetros de Ejecución
 *Opcionales para ejecución*
