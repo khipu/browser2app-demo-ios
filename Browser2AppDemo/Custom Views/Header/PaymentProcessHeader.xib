@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PaymentProcessHeader">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="181"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fpf-UV-lQN">
+                    <rect key="frame" x="16" y="8" width="352" height="29"/>
+                    <segments>
+                        <segment title="Paso 1"/>
+                        <segment title="Paso 2"/>
+                        <segment title="Paso 3"/>
+                    </segments>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asunto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WB-eK-jq1">
+                    <rect key="frame" x="16" y="44" width="115.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monto a pagar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUF-QL-IwG">
+                    <rect key="frame" x="16" y="73" width="115.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pagando a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPe-IZ-xiX">
+                    <rect key="frame" x="16" y="102" width="115.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": Pago de prueba" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpo-9o-Xyv">
+                    <rect key="frame" x="139.5" y="44" width="228.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": $12.500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4D-nU-28N">
+                    <rect key="frame" x="139.5" y="73" width="228.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": Restaurant Frutillar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OW9-UJ-ZEV">
+                    <rect key="frame" x="139.5" y="102" width="154" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Kl-Su-Wxo">
+                    <rect key="frame" x="318" y="131" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3tg-tF-Azb"/>
+                        <constraint firstAttribute="width" constant="50" id="HJk-gj-wt1"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zpo-9o-Xyv" firstAttribute="leading" secondItem="7WB-eK-jq1" secondAttribute="trailing" constant="8" id="1gK-fy-MKX"/>
+                <constraint firstItem="nUF-QL-IwG" firstAttribute="width" secondItem="7WB-eK-jq1" secondAttribute="width" id="2Bs-zo-0hs"/>
+                <constraint firstItem="f4D-nU-28N" firstAttribute="centerY" secondItem="nUF-QL-IwG" secondAttribute="centerY" id="3tk-jW-eSe"/>
+                <constraint firstItem="nUF-QL-IwG" firstAttribute="top" secondItem="7WB-eK-jq1" secondAttribute="bottom" constant="8" id="4QC-I1-kfR"/>
+                <constraint firstItem="7WB-eK-jq1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="98F-cD-qms"/>
+                <constraint firstItem="zPe-IZ-xiX" firstAttribute="top" secondItem="nUF-QL-IwG" secondAttribute="bottom" constant="8" id="9RV-nR-gqK"/>
+                <constraint firstAttribute="trailing" secondItem="8Kl-Su-Wxo" secondAttribute="trailing" constant="16" id="GGq-Mw-AmA"/>
+                <constraint firstItem="zPe-IZ-xiX" firstAttribute="width" secondItem="7WB-eK-jq1" secondAttribute="width" id="Hjn-PS-MPq"/>
+                <constraint firstItem="OW9-UJ-ZEV" firstAttribute="centerY" secondItem="zPe-IZ-xiX" secondAttribute="centerY" id="IMW-zL-PKg"/>
+                <constraint firstAttribute="trailing" secondItem="Fpf-UV-lQN" secondAttribute="trailing" constant="16" id="JS7-Br-XJM"/>
+                <constraint firstItem="zPe-IZ-xiX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="NOk-1T-n6M"/>
+                <constraint firstAttribute="trailing" secondItem="zpo-9o-Xyv" secondAttribute="trailing" constant="16" id="PTL-Oa-wv7"/>
+                <constraint firstItem="OW9-UJ-ZEV" firstAttribute="leading" secondItem="zPe-IZ-xiX" secondAttribute="trailing" constant="8" id="TgR-ME-sph"/>
+                <constraint firstAttribute="bottom" secondItem="8Kl-Su-Wxo" secondAttribute="bottom" id="UQZ-Mk-RkR"/>
+                <constraint firstItem="f4D-nU-28N" firstAttribute="leading" secondItem="nUF-QL-IwG" secondAttribute="trailing" constant="8" id="eF9-Lc-cuV"/>
+                <constraint firstAttribute="trailing" secondItem="f4D-nU-28N" secondAttribute="trailing" constant="16" id="fcK-nn-qF3"/>
+                <constraint firstItem="nUF-QL-IwG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="jUb-jF-iqZ"/>
+                <constraint firstItem="Fpf-UV-lQN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="jbW-12-rsO"/>
+                <constraint firstItem="zpo-9o-Xyv" firstAttribute="centerY" secondItem="7WB-eK-jq1" secondAttribute="centerY" id="m9U-cX-JnZ"/>
+                <constraint firstItem="7WB-eK-jq1" firstAttribute="top" secondItem="Fpf-UV-lQN" secondAttribute="bottom" constant="8" id="nxm-qs-Nix"/>
+                <constraint firstItem="8Kl-Su-Wxo" firstAttribute="top" secondItem="OW9-UJ-ZEV" secondAttribute="bottom" constant="8" id="rl3-ts-Utn"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OW9-UJ-ZEV" secondAttribute="trailing" constant="16" id="uXd-TK-bqZ"/>
+                <constraint firstItem="Fpf-UV-lQN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="v3g-L1-9ct"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="amount" destination="f4D-nU-28N" id="35Y-0J-5F4"/>
+                <outlet property="merchantImage" destination="8Kl-Su-Wxo" id="0Ad-LZ-BhA"/>
+                <outlet property="merchantName" destination="OW9-UJ-ZEV" id="Bsx-a8-zDc"/>
+                <outlet property="subject" destination="zpo-9o-Xyv" id="g3k-UO-ua3"/>
+            </connections>
+            <point key="canvasLocation" x="53" y="113.5"/>
+        </view>
+    </objects>
+</document>

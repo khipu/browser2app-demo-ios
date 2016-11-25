@@ -16,6 +16,10 @@
 		2C61A2A81DA83248001B3D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C61A2A61DA83248001B3D72 /* LaunchScreen.storyboard */; };
 		2C61A2B11DA833B8001B3D72 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C61A2B01DA833B8001B3D72 /* libxml2.tbd */; };
 		2C6E0B6E1DB7D0430012CB96 /* UINavigationController+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E0B6D1DB7D0430012CB96 /* UINavigationController+Extras.m */; };
+		536BA81D1DE6712700BDD244 /* PaymentProcessHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536BA81A1DE6712700BDD244 /* PaymentProcessHeader.xib */; };
+		536BA81E1DE6712700BDD244 /* PaymentProcessHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 536BA81C1DE6712700BDD244 /* PaymentProcessHeader.m */; };
+		53B811061DE6A0F800B005EB /* Warning.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B811031DE6A0F800B005EB /* Warning.xib */; };
+		53B811071DE6A0F800B005EB /* WarningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B811051DE6A0F800B005EB /* WarningViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,12 @@
 		2C6E0B6C1DB7D0430012CB96 /* UINavigationController+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Extras.h"; sourceTree = "<group>"; };
 		2C6E0B6D1DB7D0430012CB96 /* UINavigationController+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Extras.m"; sourceTree = "<group>"; };
 		31A357B60F63970F54A91B15 /* Pods_Browser2AppDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Browser2AppDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		536BA81A1DE6712700BDD244 /* PaymentProcessHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentProcessHeader.xib; sourceTree = "<group>"; };
+		536BA81B1DE6712700BDD244 /* PaymentProcessHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentProcessHeader.h; sourceTree = "<group>"; };
+		536BA81C1DE6712700BDD244 /* PaymentProcessHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentProcessHeader.m; sourceTree = "<group>"; };
+		53B811031DE6A0F800B005EB /* Warning.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Warning.xib; sourceTree = "<group>"; };
+		53B811041DE6A0F800B005EB /* WarningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningViewController.h; sourceTree = "<group>"; };
+		53B811051DE6A0F800B005EB /* WarningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningViewController.m; sourceTree = "<group>"; };
 		C0CA7D779F25C5C3E2D00FE8 /* Pods-Browser2AppDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Browser2AppDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Browser2AppDemo/Pods-Browser2AppDemo.release.xcconfig"; sourceTree = "<group>"; };
 		CE1E048E2608B4F1E957656B /* Pods-Browser2AppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Browser2AppDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Browser2AppDemo/Pods-Browser2AppDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +81,7 @@
 		2C61A2971DA83248001B3D72 /* Browser2AppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				536BA8131DE6704800BDD244 /* Custom Views */,
 				2C6E0B6C1DB7D0430012CB96 /* UINavigationController+Extras.h */,
 				2C6E0B6D1DB7D0430012CB96 /* UINavigationController+Extras.m */,
 				2C61A29B1DA83248001B3D72 /* AppDelegate.h */,
@@ -112,6 +123,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		536BA8131DE6704800BDD244 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				53B811011DE6A0AA00B005EB /* Payment Process */,
+				536BA8141DE670CD00BDD244 /* Header */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		536BA8141DE670CD00BDD244 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				536BA81A1DE6712700BDD244 /* PaymentProcessHeader.xib */,
+				536BA81B1DE6712700BDD244 /* PaymentProcessHeader.h */,
+				536BA81C1DE6712700BDD244 /* PaymentProcessHeader.m */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		53B811011DE6A0AA00B005EB /* Payment Process */ = {
+			isa = PBXGroup;
+			children = (
+				53B811021DE6A0CA00B005EB /* Warning */,
+			);
+			path = "Payment Process";
+			sourceTree = "<group>";
+		};
+		53B811021DE6A0CA00B005EB /* Warning */ = {
+			isa = PBXGroup;
+			children = (
+				53B811031DE6A0F800B005EB /* Warning.xib */,
+				53B811041DE6A0F800B005EB /* WarningViewController.h */,
+				53B811051DE6A0F800B005EB /* WarningViewController.m */,
+			);
+			path = Warning;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,7 +189,7 @@
 		2C61A28D1DA83248001B3D72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = khipu;
 				TargetAttributes = {
 					2C61A2941DA83248001B3D72 = {
@@ -177,6 +225,8 @@
 				2C61A2A81DA83248001B3D72 /* LaunchScreen.storyboard in Resources */,
 				2C61A2A51DA83248001B3D72 /* Assets.xcassets in Resources */,
 				2C61A2A31DA83248001B3D72 /* Main.storyboard in Resources */,
+				53B811061DE6A0F800B005EB /* Warning.xib in Resources */,
+				536BA81D1DE6712700BDD244 /* PaymentProcessHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +288,9 @@
 				2C61A2A01DA83248001B3D72 /* ViewController.m in Sources */,
 				2C61A29D1DA83248001B3D72 /* AppDelegate.m in Sources */,
 				2C6E0B6E1DB7D0430012CB96 /* UINavigationController+Extras.m in Sources */,
+				536BA81E1DE6712700BDD244 /* PaymentProcessHeader.m in Sources */,
 				2C61A29A1DA83248001B3D72 /* main.m in Sources */,
+				53B811071DE6A0F800B005EB /* WarningViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +334,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -330,6 +383,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

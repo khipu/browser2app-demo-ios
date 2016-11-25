@@ -7,6 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import <khenshin/khenshin.h>
+
+#define KH_AUTOMATON_API_URL @"https://khipu.com/app/2.0"
+#define KH_CEREBRO_URL @"https://khipu.com/cerebro"
+
+#import "PaymentProcessHeader.h"
+#import "WarningViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +24,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self configureKhenshin];
+    
     return YES;
 }
 
@@ -47,5 +57,88 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void) configureKhenshin {
+    
+    [KhenshinInterface initWithNavigationBarCenteredLogo:[UIImage imageNamed:@"Bar Logo"]
+                               NavigationBarLeftSideLogo:[[UIImage alloc] init]
+                                   technologyInsideImage:[UIImage imageNamed:@"khipu inside"]
+                                         automatonAPIURL:[self safeURLWithString:KH_AUTOMATON_API_URL]
+                                           cerebroAPIURL:[self safeURLWithString:KH_CEREBRO_URL]
+                                                appToken:@""
+                                    paymentProcessHeader:[self paymentProcessHeader]
+                                   paymentProcessFailure:nil
+                                   paymentProcessSuccess:nil
+                                   paymentProcessWarning:[self warningViewController]
+                                  allowCredentialsSaving:NO
+                                 fatContinueButtonInForm:YES
+                              normalContinueButtonInForm:NO
+                         hideWebAddressInformationInForm:NO
+                                useBarCenteredLogoInForm:NO
+                                          principalColor:[self principalColor]
+                                    darkerPrincipalColor:[self darkerPrincipalColor]
+                                          secondaryColor:[self secondaryColor]
+                                   navigationBarTextTint:[self navigationBarTextTint]
+                                                    font:[UIFont fontWithName:@"Avenir Next Condensed" size:15.0f]];
+    
+    [KhenshinInterface setPreferredStatusBarStyle:UIStatusBarStyleLightContent];
+}
 
+- (UIViewController<PaymentProcessExit>*) warningViewController {
+    
+    WarningViewController *warningViewController = [[WarningViewController alloc] initWithNibName:@"Warning"
+                                                                                           bundle:[NSBundle mainBundle]];
+    
+    return warningViewController;
+}
+
+- (UIView<PaymentProcessHeader>*) paymentProcessHeader {
+    
+    PaymentProcessHeader *paymentProcessHeaderObj =    [[[NSBundle mainBundle] loadNibNamed:@"PaymentProcessHeader"
+                                                                                      owner:self
+                                                                                    options:nil]
+                                                        objectAtIndex:0];
+    
+//    return nil;
+    return paymentProcessHeaderObj;
+}
+
+- (UIColor*) principalColor {
+    
+//    return [UIColor colorWithRed:1.0
+//                           green:0.0
+//                            blue:16.0/255.0
+//                           alpha:1.0];
+    return [UIColor lightGrayColor];
+}
+
+- (UIColor*) darkerPrincipalColor {
+    
+//    return [UIColor colorWithRed:137.0/255.0
+//                           green:0.0
+//                            blue:255.0/255.0
+//                           alpha:1.0];
+    return [UIColor darkGrayColor];
+}
+
+- (UIColor*) secondaryColor {
+    
+//    return [UIColor colorWithRed:50.0/255.0
+//                           green:1.0
+//                            blue:77.0/255.0
+//                           alpha:1.0];
+    return [UIColor redColor];
+}
+
+- (UIColor*) navigationBarTextTint {
+    
+    return [UIColor whiteColor];
+}
+
+
+
+
+- (NSURL *) safeURLWithString:(NSString *)URLString {
+    
+    return [NSURL URLWithString:[URLString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
+}
 @end
