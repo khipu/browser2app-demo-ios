@@ -70,8 +70,7 @@
                                    paymentProcessSuccess:nil
                                    paymentProcessWarning:[self warningViewController]
                                   allowCredentialsSaving:NO
-                                 fatContinueButtonInForm:YES
-                              normalContinueButtonInForm:NO
+                                         mainButtonStyle:KHMainButtonFatOnForm
                          hideWebAddressInformationInForm:NO
                                 useBarCenteredLogoInForm:NO
                                           principalColor:[self principalColor]

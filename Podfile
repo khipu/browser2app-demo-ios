@@ -6,6 +6,6 @@ target 'Browser2AppDemo' do
   use_frameworks!
 
   # Pods for Browser2AppDemo
-  pod 'khenshin', :git => 'https://bitbucket.org/khipu/khenshin-pod.git', :tag => '1.36'
+  pod 'khenshin', :git => 'https://bitbucket.org/khipu/khenshin-pod.git', :tag => '1.38'
 
 end
