@@ -9,8 +9,13 @@
 #import "AppDelegate.h"
 #import <khenshin/khenshin.h>
 
-#define KH_AUTOMATON_API_URL @"https://khipu.com/app/2.0"
-#define KH_CEREBRO_URL @"https://khipu.com/cerebro"
+// EJEMPLO PARA PAGOS GENERADOS CON API khipu
+//#define KH_AUTOMATON_API_URL @"https://khipu.com/app/2.0"
+//#define KH_CEREBRO_URL @"https://khipu.com/cerebro"
+
+// EJEMPLO PARA B2A CMR
+#define KH_AUTOMATON_API_URL @"https://cmr.browser2app.com/api/automata/"
+#define KH_CEREBRO_URL @"https://cmr.browser2app.com/api/automata/"
 
 #import "PaymentProcessHeader.h"
 #import "WarningViewController.h"
@@ -61,14 +66,12 @@
     
     [KhenshinInterface initWithNavigationBarCenteredLogo:[UIImage imageNamed:@"Bar Logo"]
                                NavigationBarLeftSideLogo:[[UIImage alloc] init]
-                                   technologyInsideImage:[UIImage imageNamed:@"khipu inside"]
                                          automatonAPIURL:[self safeURLWithString:KH_AUTOMATON_API_URL]
                                            cerebroAPIURL:[self safeURLWithString:KH_CEREBRO_URL]
-                                                appToken:@""
-                                    paymentProcessHeader:[self paymentProcessHeader]
-                                   paymentProcessFailure:nil
-                                   paymentProcessSuccess:nil
-                                   paymentProcessWarning:[self warningViewController]
+                                           processHeader:(UIView<ProcessHeader>*)[self processHeader]
+                                          processFailure:nil
+                                          processSuccess:nil
+                                          processWarning:(UIViewController<ProcessExit>*)[self warningViewController]
                                   allowCredentialsSaving:NO
                                          mainButtonStyle:KHMainButtonFatOnForm
                          hideWebAddressInformationInForm:NO
@@ -82,7 +85,7 @@
     [KhenshinInterface setPreferredStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
-- (UIViewController<PaymentProcessExit>*) warningViewController {
+- (UIViewController*) warningViewController {
     
     WarningViewController *warningViewController = [[WarningViewController alloc] initWithNibName:@"Warning"
                                                                                            bundle:[NSBundle mainBundle]];
@@ -90,41 +93,41 @@
     return warningViewController;
 }
 
-- (UIView<PaymentProcessHeader>*) paymentProcessHeader {
+- (UIView*) processHeader {
     
-    PaymentProcessHeader *paymentProcessHeaderObj =    [[[NSBundle mainBundle] loadNibNamed:@"PaymentProcessHeader"
-                                                                                      owner:self
-                                                                                    options:nil]
-                                                        objectAtIndex:0];
+    PaymentProcessHeader *processHeaderObj =    [[[NSBundle mainBundle] loadNibNamed:@"PaymentProcessHeader"
+                                                                               owner:self
+                                                                             options:nil]
+                                                 objectAtIndex:0];
     
-//    return nil;
-    return paymentProcessHeaderObj;
+    //    return nil;
+    return processHeaderObj;
 }
 
 - (UIColor*) principalColor {
     
-//    return [UIColor colorWithRed:1.0
-//                           green:0.0
-//                            blue:16.0/255.0
-//                           alpha:1.0];
+    //    return [UIColor colorWithRed:1.0
+    //                           green:0.0
+    //                            blue:16.0/255.0
+    //                           alpha:1.0];
     return [UIColor lightGrayColor];
 }
 
 - (UIColor*) darkerPrincipalColor {
     
-//    return [UIColor colorWithRed:137.0/255.0
-//                           green:0.0
-//                            blue:255.0/255.0
-//                           alpha:1.0];
+    //    return [UIColor colorWithRed:137.0/255.0
+    //                           green:0.0
+    //                            blue:255.0/255.0
+    //                           alpha:1.0];
     return [UIColor darkGrayColor];
 }
 
 - (UIColor*) secondaryColor {
     
-//    return [UIColor colorWithRed:50.0/255.0
-//                           green:1.0
-//                            blue:77.0/255.0
-//                           alpha:1.0];
+    //    return [UIColor colorWithRed:50.0/255.0
+    //                           green:1.0
+    //                            blue:77.0/255.0
+    //                           alpha:1.0];
     return [UIColor redColor];
 }
 

@@ -37,46 +37,47 @@
 
 - (IBAction)goPay:(id)sender {
     
-    [self.view endEditing:YES];
+    // EJEMPLO PARA B2A CMR
+    [KhenshinInterface startEngineWithAutomatonId: @"Bawdf"
+                                         animated:YES
+                                       parameters:@{@"subject": @"Pago Demo",
+                                                    @"amount": @"2",
+                                                    @"paymentId": [[NSUUID UUID] UUIDString],
+                                                    @"khipu_account_name": @"Cuenta Demo",
+                                                    @"khipu_account_number": @"123456789",
+                                                    @"khipu_alias": @"Cuenta Demo",
+                                                    @"payer_name": @"Rubén Blades",
+                                                    @"payer_email": @"ruben.blades@demobank.com",
+                                                    @"khipu_rut": @"12.345.678-9",
+                                                    @"khipu_email": @"transferencias@khipu.com"}
+                                   userIdentifier:nil
+                                          success:^(NSURL *returnURL) {
+                                              
+                                              NSLog(@"Volver con ¡éxito!");
+                                          } failure:^(NSURL *returnURL) {
+                                              
+                                              NSLog(@"Volver con fracaso :(");
+                                          }];
     
-    NSURL *url = [NSURL URLWithString:self.URLTextField.text];
-    
-    if (!url ||
-        url.absoluteString.length == 0) {
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error"
-                                                                       message:@"La URL no corresponde a un pago generado en khipu.com"
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction* noAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil)
-                                                           style:UIAlertActionStyleDefault
-                                                         handler:^(UIAlertAction * _Nonnull action) {
-#pragma unused(action)
-                                                             
-                                                             [self.URLTextField becomeFirstResponder];
-                                                         }];
-        [alert addAction:noAction];
-        
-        [self presentViewController:alert
-                           animated:YES
-                         completion:nil];
-    } else {
-        
-        NSLog(@"Llamando a khenshin!");
-        
-        [KhenshinInterface startEngineWithPaymentExternalId:[url.path lastPathComponent]
-                                             userIdentifier:@""
-                                          isExternalPayment:YES
-                                                    success:^(NSURL *returnURL) {
-                                                        
-                                                        NSLog(@"Success");
-                                                        NSLog(@"Retornamos con URL: %@", [returnURL absoluteString]);
-                                                    }
-                                                    failure:^(NSURL *returnURL) {
-                                                        
-                                                        NSLog(@"Failure");
-                                                        NSLog(@"Retornamos con URL: %@", [returnURL absoluteString]);
-                                                    }
-                                                   animated:YES];
-    }
+    // EJEMPLO PARA PAGOS GENERADOS CON API khipu
+    /*
+    [KhenshinInterface startEngineWithPaymentExternalId:ID GENERADO POR khipu
+                                         userIdentifier:@""
+                                      isExternalPayment:YES
+                                                success:^(NSURL *returnURL) {
+                                                    
+                                                    NSLog(@"Success");
+                                                    NSLog(@"Retornamos con URL: %@", [returnURL absoluteString]);
+                                                }
+                                                failure:^(NSURL *returnURL) {
+                                                    
+                                                    NSLog(@"Failure");
+                                                    NSLog(@"Retornamos con URL: %@", [returnURL absoluteString]);
+                                                }
+                                               animated:YES];
+     
+     
+     */
 }
 
 

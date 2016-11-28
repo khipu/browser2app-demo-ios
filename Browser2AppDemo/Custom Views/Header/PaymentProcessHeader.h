@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <khenshin/khenshin.h>
 
-@interface PaymentProcessHeader : UIView<PaymentProcessHeader>
+@interface PaymentProcessHeader : UIView<ProcessHeader>
 
 @property (weak, nonatomic) IBOutlet UILabel *subject;
 @property (weak, nonatomic) IBOutlet UILabel *amount;
 @property (weak, nonatomic) IBOutlet UILabel *merchantName;
+@property (weak, nonatomic) IBOutlet UILabel *paymentMethod;
 @property (weak, nonatomic) IBOutlet UIImageView *merchantImage;
 
 

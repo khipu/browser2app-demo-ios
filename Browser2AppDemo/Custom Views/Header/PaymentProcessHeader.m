@@ -18,11 +18,13 @@
 - (void) configureWithSubject:(NSString*) subject
     formattedAmountAsCurrency:(NSString*) amount
                  merchantName:(NSString*) merchantName
-             merchantImageURL:(NSString*) merchantImageURL {
+             merchantImageURL:(NSString*) merchantImageURL
+                paymentMethod:(NSString *) paymentMethod {
     
     [[self subject] setText:[NSString stringWithFormat:@":%@",subject]];
     [[self amount] setText:[NSString stringWithFormat:@":%@",amount]];
     [[self merchantName] setText:[NSString stringWithFormat:@":%@",merchantName]];
+    [[self paymentMethod] setText:[NSString stringWithFormat:@":%@",paymentMethod]];
     [self downloadMerchantImageWithMerchantImageURL:merchantImageURL];
 }
 

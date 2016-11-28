@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sYg-eo-1E2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sYg-eo-1E2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,16 +23,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browser2App Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcY-Xa-3gF">
+                                <rect key="frame" x="16" y="72" width="343" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL del Pago" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N25-xq-zpM">
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQg-9Y-HJ5">
+                                <rect key="frame" x="163" y="318.5" width="49" height="30"/>
                                 <state key="normal" title="¡Pagar!"/>
                                 <connections>
                                     <action selector="goPay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SoL-gf-o4Q"/>
@@ -40,19 +40,12 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="DcY-Xa-3gF" secondAttribute="trailing" id="9L8-Wg-aOw"/>
                             <constraint firstItem="vQg-9Y-HJ5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D6w-qY-6qA"/>
-                            <constraint firstItem="N25-xq-zpM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DOP-mc-dYo"/>
-                            <constraint firstItem="vQg-9Y-HJ5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="N25-xq-zpM" secondAttribute="bottom" constant="8" id="NXE-1R-6ju"/>
-                            <constraint firstItem="N25-xq-zpM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ei6-JT-mDO"/>
-                            <constraint firstItem="N25-xq-zpM" firstAttribute="top" secondItem="DcY-Xa-3gF" secondAttribute="bottom" constant="40" id="fxo-IX-rw2"/>
                             <constraint firstItem="vQg-9Y-HJ5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lK4-p1-19J"/>
                             <constraint firstItem="DcY-Xa-3gF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qn0-38-0nJ"/>
                             <constraint firstItem="DcY-Xa-3gF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ug5-zI-Dkv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R9M-m1-VGU"/>
-                    <connections>
-                        <outlet property="URLTextField" destination="N25-xq-zpM" id="lfj-In-YZS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

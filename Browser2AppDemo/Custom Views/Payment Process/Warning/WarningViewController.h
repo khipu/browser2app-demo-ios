@@ -10,6 +10,6 @@
 #import <khenshin/khenshin.h> 
 
 
-@interface WarningViewController : UIViewController<PaymentProcessExit>
+@interface WarningViewController : UIViewController<ProcessExit>
 
 @end
