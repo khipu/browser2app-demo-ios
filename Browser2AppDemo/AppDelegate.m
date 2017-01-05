@@ -14,11 +14,18 @@
 //#define KH_CEREBRO_URL @"https://khipu.com/cerebro"
 
 // EJEMPLO PARA B2A CMR
-#define KH_AUTOMATON_API_URL @"https://cmr.browser2app.com/api/automata/"
-#define KH_CEREBRO_URL @"https://cmr.browser2app.com/api/automata/"
+#define CMR_KH_AUTOMATON_API_URL @"https://cmr.browser2app.com/api/automata/"
+#define CMR_KH_CEREBRO_URL @"https://cmr.browser2app.com/api/automata/"
+
+// EJEMPLO PARA B2A Continuity
+#define PSE_SERVER_DOMAIN @"pse.browser2app.com"
+#define PSE_KH_AUTOMATON_API_URL @"https://pse.browser2app.com/api/automata/"
+#define PSE_KH_CEREBRO_URL @"https://pse.browser2app.com/api/automata/"
+
 
 #import "PaymentProcessHeader.h"
 #import "WarningViewController.h"
+#import "SuccessPaymentViewController.h"
 
 @interface AppDelegate ()
 
@@ -30,7 +37,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [self configureKhenshin];
+    [self configureKhenshinWithAutomatonAPIURL:[self safeURLWithString:CMR_KH_AUTOMATON_API_URL]
+                                 cerebroAPIURL:[self safeURLWithString:CMR_KH_CEREBRO_URL]];
     
     return YES;
 }
@@ -62,15 +70,55 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void) configureKhenshin {
+- (BOOL) application:(UIApplication *)application
+continueUserActivity:(NSUserActivity *)userActivity
+  restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler {
+#pragma unused(application)
+#pragma unused(restorationHandler)
+    
+    NSLog(@"[[userActivity webpageURL] absoluteString] : %@", [[userActivity webpageURL] absoluteString]);
+    
+    if ([[[[userActivity webpageURL] path] lastPathComponent] length] > 0) {
+        
+        
+        if ([[[userActivity webpageURL] absoluteString] containsString:PSE_SERVER_DOMAIN]) {
+            
+            [self configureKhenshinWithAutomatonAPIURL:[self safeURLWithString:PSE_KH_AUTOMATON_API_URL]
+                                         cerebroAPIURL:[self safeURLWithString:PSE_KH_CEREBRO_URL]];
+            
+            [KhenshinInterface startEngineWithAutomatonRequestId:[[userActivity webpageURL].path lastPathComponent]
+                                                        animated:YES
+                                                  userIdentifier:@""
+                                            navigationController:nil
+                                                         success:^(NSURL *returnURL) {
+                                                             
+                                                             NSLog(@"¡Hemos vuelto!");
+                                                         }
+                                                         failure:^(NSURL *returnURL) {
+                                                             
+                                                             NSLog(@"¡Hemos vuelto con error!");
+                                                         }];
+        }        
+
+    } else {
+        
+        NSLog(@"We have found a problem with the URL: '%@'. We can not process the payment.",[[userActivity webpageURL] path]);
+    }
+    
+    return YES;
+}
+
+
+- (void) configureKhenshinWithAutomatonAPIURL:(NSURL*) automatonAPIURL
+                                cerebroAPIURL:(NSURL*) cerebroAPIURL{
     
     [KhenshinInterface initWithNavigationBarCenteredLogo:[UIImage imageNamed:@"Bar Logo"]
                                NavigationBarLeftSideLogo:[[UIImage alloc] init]
-                                         automatonAPIURL:[self safeURLWithString:KH_AUTOMATON_API_URL]
-                                           cerebroAPIURL:[self safeURLWithString:KH_CEREBRO_URL]
+                                         automatonAPIURL:automatonAPIURL
+                                           cerebroAPIURL:cerebroAPIURL
                                            processHeader:(UIView<ProcessHeader>*)[self processHeader]
                                           processFailure:nil
-                                          processSuccess:nil
+                                          processSuccess:(UIViewController<ProcessExit>*)[self successViewController]
                                           processWarning:(UIViewController<ProcessExit>*)[self warningViewController]
                                   allowCredentialsSaving:NO
                                          mainButtonStyle:KHMainButtonFatOnForm
@@ -83,6 +131,15 @@
                                                     font:[UIFont fontWithName:@"Avenir Next Condensed" size:15.0f]];
     
     [KhenshinInterface setPreferredStatusBarStyle:UIStatusBarStyleLightContent];
+}
+
+- (UIViewController*) successViewController {
+    
+    
+    SuccessPaymentViewController *successViewController = [[SuccessPaymentViewController alloc] initWithNibName:@"Success"
+                                                                                           bundle:[NSBundle mainBundle]];
+    
+    return successViewController;
 }
 
 - (UIViewController*) warningViewController {

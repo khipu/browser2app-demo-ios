@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16D9683E0F0D31B580828A51 /* Pods_Browser2AppDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A357B60F63970F54A91B15 /* Pods_Browser2AppDemo.framework */; };
+		2C2AA6B31E1D984C001CC626 /* Success.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AA6B21E1D984C001CC626 /* Success.xib */; };
 		2C61A29A1DA83248001B3D72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61A2991DA83248001B3D72 /* main.m */; };
 		2C61A29D1DA83248001B3D72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61A29C1DA83248001B3D72 /* AppDelegate.m */; };
 		2C61A2A01DA83248001B3D72 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61A29F1DA83248001B3D72 /* ViewController.m */; };
@@ -16,6 +17,7 @@
 		2C61A2A81DA83248001B3D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C61A2A61DA83248001B3D72 /* LaunchScreen.storyboard */; };
 		2C61A2B11DA833B8001B3D72 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C61A2B01DA833B8001B3D72 /* libxml2.tbd */; };
 		2C6E0B6E1DB7D0430012CB96 /* UINavigationController+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E0B6D1DB7D0430012CB96 /* UINavigationController+Extras.m */; };
+		2CD8D0251E1D86A900364161 /* SuccessPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8D0241E1D86A900364161 /* SuccessPaymentViewController.m */; };
 		536BA81D1DE6712700BDD244 /* PaymentProcessHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536BA81A1DE6712700BDD244 /* PaymentProcessHeader.xib */; };
 		536BA81E1DE6712700BDD244 /* PaymentProcessHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 536BA81C1DE6712700BDD244 /* PaymentProcessHeader.m */; };
 		53B811061DE6A0F800B005EB /* Warning.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B811031DE6A0F800B005EB /* Warning.xib */; };
@@ -23,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C2AA6B21E1D984C001CC626 /* Success.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Success.xib; sourceTree = "<group>"; };
 		2C61A2951DA83248001B3D72 /* Browser2AppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Browser2AppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C61A2991DA83248001B3D72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C61A29B1DA83248001B3D72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		2C61A2B01DA833B8001B3D72 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		2C6E0B6C1DB7D0430012CB96 /* UINavigationController+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Extras.h"; sourceTree = "<group>"; };
 		2C6E0B6D1DB7D0430012CB96 /* UINavigationController+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Extras.m"; sourceTree = "<group>"; };
+		2C9FA67F1DF0AE37002D0A51 /* Browser2AppDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Browser2AppDemo.entitlements; sourceTree = "<group>"; };
+		2CD8D0231E1D86A900364161 /* SuccessPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessPaymentViewController.h; sourceTree = "<group>"; };
+		2CD8D0241E1D86A900364161 /* SuccessPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessPaymentViewController.m; sourceTree = "<group>"; };
 		31A357B60F63970F54A91B15 /* Pods_Browser2AppDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Browser2AppDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		536BA81A1DE6712700BDD244 /* PaymentProcessHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentProcessHeader.xib; sourceTree = "<group>"; };
 		536BA81B1DE6712700BDD244 /* PaymentProcessHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentProcessHeader.h; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 		2C61A2971DA83248001B3D72 /* Browser2AppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2C9FA67F1DF0AE37002D0A51 /* Browser2AppDemo.entitlements */,
 				536BA8131DE6704800BDD244 /* Custom Views */,
 				2C6E0B6C1DB7D0430012CB96 /* UINavigationController+Extras.h */,
 				2C6E0B6D1DB7D0430012CB96 /* UINavigationController+Extras.m */,
@@ -114,6 +121,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2CD8D01F1E1D863100364161 /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				2CD8D0231E1D86A900364161 /* SuccessPaymentViewController.h */,
+				2CD8D0241E1D86A900364161 /* SuccessPaymentViewController.m */,
+				2C2AA6B21E1D984C001CC626 /* Success.xib */,
+			);
+			path = Success;
+			sourceTree = "<group>";
+		};
 		38974A960A5D9B2EEE8FB3B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +162,7 @@
 		53B811011DE6A0AA00B005EB /* Payment Process */ = {
 			isa = PBXGroup;
 			children = (
+				2CD8D01F1E1D863100364161 /* Success */,
 				53B811021DE6A0CA00B005EB /* Warning */,
 			);
 			path = "Payment Process";
@@ -196,6 +214,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2X63E3W773;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -223,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C61A2A81DA83248001B3D72 /* LaunchScreen.storyboard in Resources */,
+				2C2AA6B31E1D984C001CC626 /* Success.xib in Resources */,
 				2C61A2A51DA83248001B3D72 /* Assets.xcassets in Resources */,
 				2C61A2A31DA83248001B3D72 /* Main.storyboard in Resources */,
 				53B811061DE6A0F800B005EB /* Warning.xib in Resources */,
@@ -291,6 +315,7 @@
 				536BA81E1DE6712700BDD244 /* PaymentProcessHeader.m in Sources */,
 				2C61A29A1DA83248001B3D72 /* main.m in Sources */,
 				53B811071DE6A0F800B005EB /* WarningViewController.m in Sources */,
+				2CD8D0251E1D86A900364161 /* SuccessPaymentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +438,7 @@
 			baseConfigurationReference = CE1E048E2608B4F1E957656B /* Pods-Browser2AppDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Browser2AppDemo/Browser2AppDemo.entitlements;
 				DEVELOPMENT_TEAM = 2X63E3W773;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -431,6 +457,7 @@
 			baseConfigurationReference = C0CA7D779F25C5C3E2D00FE8 /* Pods-Browser2AppDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Browser2AppDemo/Browser2AppDemo.entitlements;
 				DEVELOPMENT_TEAM = 2X63E3W773;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
