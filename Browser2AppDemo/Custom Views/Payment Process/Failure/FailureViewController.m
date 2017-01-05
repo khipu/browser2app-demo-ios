@@ -1,20 +1,20 @@
 //
-//  SuccessPaymentViewController.m
+//  FailureViewController.m
 //  Browser2AppDemo
 //
-//  Created by Iván Galaz-Jeria on 1/4/17.
+//  Created by Iván Galaz-Jeria on 1/5/17.
 //  Copyright © 2017 khipu. All rights reserved.
 //
 
-#import "SuccessPaymentViewController.h"
+#import "FailureViewController.h"
 
-@interface SuccessPaymentViewController ()
+@interface FailureViewController ()
 
 @property (strong, nonatomic) void (^finishBlock)(void);
 
 @end
 
-@implementation SuccessPaymentViewController
+@implementation FailureViewController
 
 - (void) configureWithPaymentSubject:(NSString*) subject
            formattedAmountAsCurrency:(NSString*) amount
@@ -25,7 +25,7 @@
                              message:(NSString*) message
                               finish:(void (^)(void)) finish {
     
-     [self setFinishBlock:finish];
+    [self setFinishBlock:finish];
     
 }
 

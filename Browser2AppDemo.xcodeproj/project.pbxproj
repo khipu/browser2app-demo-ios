@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		16D9683E0F0D31B580828A51 /* Pods_Browser2AppDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A357B60F63970F54A91B15 /* Pods_Browser2AppDemo.framework */; };
+		2C2228BA1E1EB16F00B8161C /* FailureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2228B91E1EB16F00B8161C /* FailureViewController.m */; };
+		2C2228BC1E1EB21400B8161C /* Failure.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2228BB1E1EB21400B8161C /* Failure.xib */; };
 		2C2AA6B31E1D984C001CC626 /* Success.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AA6B21E1D984C001CC626 /* Success.xib */; };
 		2C61A29A1DA83248001B3D72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61A2991DA83248001B3D72 /* main.m */; };
 		2C61A29D1DA83248001B3D72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61A29C1DA83248001B3D72 /* AppDelegate.m */; };
@@ -25,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C2228B81E1EB16F00B8161C /* FailureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailureViewController.h; sourceTree = "<group>"; };
+		2C2228B91E1EB16F00B8161C /* FailureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailureViewController.m; sourceTree = "<group>"; };
+		2C2228BB1E1EB21400B8161C /* Failure.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Failure.xib; sourceTree = "<group>"; };
 		2C2AA6B21E1D984C001CC626 /* Success.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Success.xib; sourceTree = "<group>"; };
 		2C61A2951DA83248001B3D72 /* Browser2AppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Browser2AppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C61A2991DA83248001B3D72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +71,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2228B71E1EB12100B8161C /* Failure */ = {
+			isa = PBXGroup;
+			children = (
+				2C2228B81E1EB16F00B8161C /* FailureViewController.h */,
+				2C2228B91E1EB16F00B8161C /* FailureViewController.m */,
+				2C2228BB1E1EB21400B8161C /* Failure.xib */,
+			);
+			path = Failure;
+			sourceTree = "<group>";
+		};
 		2C61A28C1DA83248001B3D72 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +177,7 @@
 		53B811011DE6A0AA00B005EB /* Payment Process */ = {
 			isa = PBXGroup;
 			children = (
+				2C2228B71E1EB12100B8161C /* Failure */,
 				2CD8D01F1E1D863100364161 /* Success */,
 				53B811021DE6A0CA00B005EB /* Warning */,
 			);
@@ -248,6 +264,7 @@
 				2C61A2A81DA83248001B3D72 /* LaunchScreen.storyboard in Resources */,
 				2C2AA6B31E1D984C001CC626 /* Success.xib in Resources */,
 				2C61A2A51DA83248001B3D72 /* Assets.xcassets in Resources */,
+				2C2228BC1E1EB21400B8161C /* Failure.xib in Resources */,
 				2C61A2A31DA83248001B3D72 /* Main.storyboard in Resources */,
 				53B811061DE6A0F800B005EB /* Warning.xib in Resources */,
 				536BA81D1DE6712700BDD244 /* PaymentProcessHeader.xib in Resources */,
@@ -310,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C61A2A01DA83248001B3D72 /* ViewController.m in Sources */,
+				2C2228BA1E1EB16F00B8161C /* FailureViewController.m in Sources */,
 				2C61A29D1DA83248001B3D72 /* AppDelegate.m in Sources */,
 				2C6E0B6E1DB7D0430012CB96 /* UINavigationController+Extras.m in Sources */,
 				536BA81E1DE6712700BDD244 /* PaymentProcessHeader.m in Sources */,

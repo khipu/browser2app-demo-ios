@@ -26,6 +26,7 @@
 #import "PaymentProcessHeader.h"
 #import "WarningViewController.h"
 #import "SuccessPaymentViewController.h"
+#import "FailureViewController.h"
 
 @interface AppDelegate ()
 
@@ -117,7 +118,7 @@ continueUserActivity:(NSUserActivity *)userActivity
                                          automatonAPIURL:automatonAPIURL
                                            cerebroAPIURL:cerebroAPIURL
                                            processHeader:(UIView<ProcessHeader>*)[self processHeader]
-                                          processFailure:nil
+                                          processFailure:(UIViewController<ProcessExit>*)[self failureViewController]
                                           processSuccess:(UIViewController<ProcessExit>*)[self successViewController]
                                           processWarning:(UIViewController<ProcessExit>*)[self warningViewController]
                                   allowCredentialsSaving:NO
@@ -148,6 +149,15 @@ continueUserActivity:(NSUserActivity *)userActivity
                                                                                            bundle:[NSBundle mainBundle]];
     
     return warningViewController;
+}
+
+- (UIViewController*) failureViewController {
+    
+    
+    FailureViewController *failureViewController = [[FailureViewController alloc] initWithNibName:@"Failure"
+                                                                                                         bundle:[NSBundle mainBundle]];
+    
+    return failureViewController;
 }
 
 - (UIView*) processHeader {
