@@ -4,7 +4,7 @@ Build 25
 
 Esta aplicación ha sido creada para demostrar la utilización de nuestra biblioteca khenshin. Para poder ejecutar esta aplicación es necesario que tengas acceso a nuestro repositorio privado(*): *https://bitbucket.org/khipu/khenshin-pod.git*
 
-(*) Éstos datos serán entregados por tu *ejecutiva* ***Khenshin***
+(*) Éstos datos serán entregados por tu *ejecutivo* ***Browser2app***
 
 ## Frameworks
 * libxml2. Es necesario agregar esta biblioteca a tu proyecto antes de compilar con khenshin
