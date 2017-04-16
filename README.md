@@ -47,7 +47,7 @@ En *AppDelegate.m* puedes ver la inicialización de **khenshin**:
 
 > [[UIImage alloc] init]
 
-(*) Éstos datos serán entregados por tu *ejecutivo* ***Khenshin***
+(*) Éstos datos serán entregados por tu *ejecutivo* ***Browser2app***
 
 ## Ejemplo de Inicialización
 **Detalle se encuentra en AppDelegate.m**
@@ -147,4 +147,4 @@ El Id de pago se debe obtener luego de crear un pago ver [la API de creación de
                                           NSLog(@"Volver con fracaso :(");
                                       }];
 ```
-(*) Tu *ejecutivo* ***Khenshin*** te informará las opciones para el ID\_DE\_AUTOMATA y los PARAM\_1 a PARAM\_N
+(*) Tu *ejecutivo* ***Browser2app*** te informará las opciones para el ID\_DE\_AUTOMATA y los PARAM\_1 a PARAM\_N
