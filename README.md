@@ -85,7 +85,7 @@ Puedes configurar el estilo de la barra de estado.
 ## Parámetros de Invocación
 Khenshin se puede invocar de dos maneras. La primera es a partir de un pago generado con [la API de creación de pagos](https://khipu.com/page/api) de khipu y la segunda es a partir de un identificador de autómata y un diccionario de parámetros.
 
-###Invocación a partir de un pago generado en khipu.com
+### Invocación a partir de un pago generado en khipu.com
 *Opcionales para ejecución*
  
 * **userIdentifier**: se utiliza para generar un identificador único del usuario. Permite guardar y leer credenciales del medio de pago en caso que el usuario elijas guardarlas.
@@ -118,7 +118,7 @@ Khenshin se puede invocar de dos maneras. La primera es a partir de un pago gene
 ```
 El Id de pago se debe obtener luego de crear un pago ver [la API de creación de pagos](https://khipu.com/page/api)
 
-###Invocación a partir de un identificador de autómata y parámetros del proceso.
+### Invocación a partir de un identificador de autómata y parámetros del proceso.
 *Opcionales para ejecución*
  
 * **userIdentifier**: se utiliza para generar un identificador único del usuario. Permite guardar y leer credenciales del medio de pago en caso que el usuario elijas guardarlas.
