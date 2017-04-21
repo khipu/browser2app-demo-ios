@@ -1,10 +1,31 @@
-# Browser2App
-Version 2.1  
-Build 25
+# Browser2app
+
+Browser2app es un servicio, provisto por khipu, que permite integrar flujos de trabajo web en aplicaciones nativas de Android e iOS con experiencia nativa sin hacer modificaciones al backend ni frontend existente. Por ejemplo, es posible que una app de compra integre todo el flujo de autorización de pago dentro de su app, sin necesidad de enviar al usuario a autorizar el pago a un navegador o abrir un WebView.
+
+El servicio se compone de tres partes.
+
+1. Biblioteca nativa, que debes integrar a tu app, existen versiones para iOS y para Android.
+2. Servidor de autómatas, que puede estar alojado en tus instalaciones o las nuestras.
+3. Servicio de configurción y mantención de autómatas.
+
+En Browser2app existen varios niveles de configuración de la experiencia del usuario, algunos son controlados por el servidor de autómatas y se definen en la implementación del proyecto, otros se definen al momento de inicializar la biblioteca y finalmente otros se definen para cada instancia de una operación, la siguiente imágen muestra parte de los que se puede configurar.
+
+![khenshin](khenshin.png)
+
+
+Si estás interesado en utilizar Browser2app en tu app, [contáctanos](mailto:soporte@khipu.com)
+
+# Manual de uso la biblioteca nativa Browser2app en iOS (pod khenshin) 
 
 Esta aplicación ha sido creada para demostrar la utilización de nuestra biblioteca khenshin. Para poder ejecutar esta aplicación es necesario que tengas acceso a nuestro repositorio privado(*): *https://bitbucket.org/khipu/khenshin-pod.git*
 
-(*) Éstos datos serán entregados por tu *ejecutivo* ***Browser2app***
+Los pasos necesarios para utilizar la biblioteca nativa iOS para Browser2app son:
+
+1. [Configurar frameworks](#frameworks)
+2. [Agregar cocoapod khenshin](#cocoapod)
+3. [Flags de compilación](#add--objc)
+4. [Inicialización de la biblioteca](#inicializacion)
+5. [Invocar browser2app desde tu app](#parámetros-de-invocación)
 
 ## Frameworks
 * libxml2. Es necesario agregar esta biblioteca a tu proyecto antes de compilar con khenshin
