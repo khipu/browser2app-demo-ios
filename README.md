@@ -24,7 +24,7 @@ Los pasos necesarios para utilizar la biblioteca nativa iOS para Browser2app son
 1. [Configurar frameworks](#frameworks)
 2. [Agregar cocoapod khenshin](#cocoapod)
 3. [Flags de compilación](#add--objc)
-4. [Inicialización de la biblioteca](#inicializacion)
+4. [Inicialización de la biblioteca](#inicialización)
 5. [Invocar browser2app desde tu app](#parámetros-de-invocación)
 
 ## Frameworks
