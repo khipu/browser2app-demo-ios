@@ -11,7 +11,8 @@
 @interface FailureViewController ()
 
 @property (strong, nonatomic) void (^finishBlock)(void);
-
+@property (weak, nonatomic) IBOutlet UILabel*   message;
+@property (strong, nonatomic) NSString*         messageText;
 @end
 
 @implementation FailureViewController
@@ -26,7 +27,7 @@
                               finish:(void (^)(void)) finish {
     
     [self setFinishBlock:finish];
-    
+    [self setMessageText:message];
 }
 
 - (IBAction)finishClicked:(id)sender {
@@ -38,6 +39,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSMutableAttributedString* attrStr = [self.message.attributedText mutableCopy];
+    [attrStr.mutableString setString:[self messageText]];
+    [self.message setAttributedText:attrStr];
 }
 
 - (void)didReceiveMemoryWarning {

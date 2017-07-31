@@ -37,6 +37,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[NSUserDefaults standardUserDefaults] setBool:YES
+                                            forKey:@"KH_SHOW_HOW_IT_WORKS"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
     [self configureKhenshinWithAutomatonAPIURL:[self safeURLWithString:CMR_KH_AUTOMATON_API_URL]
                                  cerebroAPIURL:[self safeURLWithString:CMR_KH_CEREBRO_URL]];
@@ -121,7 +124,7 @@ continueUserActivity:(NSUserActivity *)userActivity
                                           processFailure:(UIViewController<ProcessExit>*)[self failureViewController]
                                           processSuccess:(UIViewController<ProcessExit>*)[self successViewController]
                                           processWarning:(UIViewController<ProcessExit>*)[self warningViewController]
-                                  allowCredentialsSaving:NO
+                                  allowCredentialsSaving:YES
                                          mainButtonStyle:KHMainButtonFatOnForm
                          hideWebAddressInformationInForm:NO
                                 useBarCenteredLogoInForm:NO

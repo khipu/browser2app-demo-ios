@@ -13,6 +13,7 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *URLTextField;
 
+@property (strong, nonatomic) NSTimer* timer;
 @end
 
 @implementation ViewController
@@ -38,25 +39,28 @@
 - (IBAction)goPay:(id)sender {
     
     // EJEMPLO PARA B2A CMR
+//    [self startTimer];
     [KhenshinInterface startEngineWithAutomatonId: @"Bawdf"
                                          animated:YES
                                        parameters:@{@"subject": @"Pago Demo",
                                                     @"amount": @"2",
                                                     @"paymentId": [[NSUUID UUID] UUIDString],
-                                                    @"khipu_account_name": @"Cuenta Demo",
-                                                    @"khipu_account_number": @"123456789",
+                                                    @"khipu_account_name": @"Ran en BancoChile",
+                                                    @"khipu_account_number": @"560024338",
                                                     @"khipu_alias": @"Cuenta Demo",
-                                                    @"payer_name": @"Rubén Blades",
-                                                    @"payer_email": @"ruben.blades@demobank.com",
-                                                    @"khipu_rut": @"12.345.678-9",
-                                                    @"khipu_email": @"transferencias@khipu.com"}
+                                                    @"payer_name": @"Roberto Opazo",
+                                                    @"payer_email": @"roberto@opazo.cl",
+                                                    @"khipu_rut": @"9.123.845-4",
+                                                    @"khipu_email": @"roberto.opazo@khipu.com"}
                                    userIdentifier:nil
                                           success:^(NSURL *returnURL) {
                                               
                                               NSLog(@"Volver con ¡éxito!");
+                                              [self stopTimer];
                                           } failure:^(NSURL *returnURL) {
                                               
                                               NSLog(@"Volver con fracaso :(");
+                                              [self stopTimer];
                                           }];
     
     // EJEMPLO PARA PAGOS GENERADOS CON API khipu
@@ -80,6 +84,38 @@
      */
 }
 
+#define TIME_TO_WAIT_IN_SECONDS 5
 
+- (void)startTimer {
+    
+    NSLog(@"Iniciando Timer");
+    [self stopTimer];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:TIME_TO_WAIT_IN_SECONDS
+                                                  target:self
+                                                selector:@selector(report)
+                                                userInfo:nil
+                                                 repeats:YES];
+}
+
+- (void)stopTimer {
+    
+    NSLog(@"Deteniendo Timer");
+    if (self.timer != nil) {
+        
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+}
+
+- (void) report {
+    
+    NSLog(@"Reporting!");
+    [self reporteReceived];
+}
+
+- (void) reporteReceived {
+    
+    NSLog(@"Report received!");
+}
 
 @end

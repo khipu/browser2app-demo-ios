@@ -6,11 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FailureViewController">
             <connections>
+                <outlet property="message" destination="jNK-39-dRV" id="Far-we-1rn"/>
                 <outlet property="view" destination="iN0-l3-epB" id="l3G-nJ-Gq1"/>
             </connections>
         </placeholder>
@@ -26,11 +28,8 @@
                         <action selector="finishClicked:" destination="-1" eventType="touchUpInside" id="Xfe-Jf-h0V"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNK-39-dRV">
-                    <rect key="frame" x="166.5" y="173" width="42" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="42" id="QxI-fI-b8r"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNK-39-dRV">
+                    <rect key="frame" x="8" y="173" width="359" height="21"/>
                     <attributedString key="attributedText">
                         <fragment content="Failure">
                             <attributes>
@@ -43,9 +42,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="jNK-39-dRV" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="QnP-za-cTU"/>
                 <constraint firstItem="E7p-hM-kjc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UQV-d7-03v"/>
                 <constraint firstItem="E7p-hM-kjc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Vgn-RE-ny5"/>
-                <constraint firstItem="jNK-39-dRV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="edq-he-zpC"/>
+                <constraint firstItem="jNK-39-dRV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="ZRG-Nt-5OA"/>
                 <constraint firstItem="jNK-39-dRV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="173" id="tz7-D9-vOl"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>

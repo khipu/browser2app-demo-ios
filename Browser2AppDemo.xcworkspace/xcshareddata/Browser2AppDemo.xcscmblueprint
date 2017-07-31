@@ -4,13 +4,15 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6EA62033DA06EAFC9397817174198F03C3A89CA4" : 9223372036854775807,
     "03E7E7BCF5535EBB80751312959BB300142DFA11" : 9223372036854775807,
-    "6EA62033DA06EAFC9397817174198F03C3A89CA4" : 9223372036854775807
+    "CFD504C8C3B7D0508DC57D240BF8EA23E718589B" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1719AB21-C0BA-423F-9483-FEA1E4025E21",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6EA62033DA06EAFC9397817174198F03C3A89CA4" : "khenshin-pod\/",
     "03E7E7BCF5535EBB80751312959BB300142DFA11" : "Browser2AppDemo\/",
-    "6EA62033DA06EAFC9397817174198F03C3A89CA4" : "khenshin-pod\/"
+    "CFD504C8C3B7D0508DC57D240BF8EA23E718589B" : "khipu-ios\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Browser2AppDemo",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -25,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/khipu\/khenshin-pod.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6EA62033DA06EAFC9397817174198F03C3A89CA4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/bitbucket.org\/khipu\/ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CFD504C8C3B7D0508DC57D240BF8EA23E718589B"
     }
   ]
 }

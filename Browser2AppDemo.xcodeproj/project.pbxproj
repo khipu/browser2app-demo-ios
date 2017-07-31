@@ -19,6 +19,7 @@
 		2C61A2A81DA83248001B3D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C61A2A61DA83248001B3D72 /* LaunchScreen.storyboard */; };
 		2C61A2B11DA833B8001B3D72 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C61A2B01DA833B8001B3D72 /* libxml2.tbd */; };
 		2C6E0B6E1DB7D0430012CB96 /* UINavigationController+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E0B6D1DB7D0430012CB96 /* UINavigationController+Extras.m */; };
+		2CCB4F541F2F757700687350 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2CCB4F531F2F757700687350 /* Settings.bundle */; };
 		2CD8D0251E1D86A900364161 /* SuccessPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8D0241E1D86A900364161 /* SuccessPaymentViewController.m */; };
 		536BA81D1DE6712700BDD244 /* PaymentProcessHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536BA81A1DE6712700BDD244 /* PaymentProcessHeader.xib */; };
 		536BA81E1DE6712700BDD244 /* PaymentProcessHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 536BA81C1DE6712700BDD244 /* PaymentProcessHeader.m */; };
@@ -45,6 +46,7 @@
 		2C6E0B6C1DB7D0430012CB96 /* UINavigationController+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Extras.h"; sourceTree = "<group>"; };
 		2C6E0B6D1DB7D0430012CB96 /* UINavigationController+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Extras.m"; sourceTree = "<group>"; };
 		2C9FA67F1DF0AE37002D0A51 /* Browser2AppDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Browser2AppDemo.entitlements; sourceTree = "<group>"; };
+		2CCB4F531F2F757700687350 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		2CD8D0231E1D86A900364161 /* SuccessPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessPaymentViewController.h; sourceTree = "<group>"; };
 		2CD8D0241E1D86A900364161 /* SuccessPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessPaymentViewController.m; sourceTree = "<group>"; };
 		31A357B60F63970F54A91B15 /* Pods_Browser2AppDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Browser2AppDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 		2C61A2981DA83248001B3D72 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2CCB4F531F2F757700687350 /* Settings.bundle */,
 				2C61A2991DA83248001B3D72 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -261,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCB4F541F2F757700687350 /* Settings.bundle in Resources */,
 				2C61A2A81DA83248001B3D72 /* LaunchScreen.storyboard in Resources */,
 				2C2AA6B31E1D984C001CC626 /* Success.xib in Resources */,
 				2C61A2A51DA83248001B3D72 /* Assets.xcassets in Resources */,
@@ -316,7 +320,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
