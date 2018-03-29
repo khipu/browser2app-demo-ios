@@ -1,0 +1,87 @@
+
+/* Class = "UIBarButtonItem"; title = "Continue"; ObjectID = "4cf-9a-XYL"; */
+"4cf-9a-XYL.title" = "Continue";
+
+/* Class = "UIButton"; normalTitle = "Terminar"; ObjectID = "6O0-YP-Uh0"; */
+"6O0-YP-Uh0.normalTitle" = "Terminar";
+
+/* Class = "UILabel"; text = "Transferencia realizada"; ObjectID = "7vb-Uz-Mqv"; */
+"7vb-Uz-Mqv.text" = "Transferencia realizada";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "Bjo-Xf-hpq"; */
+"Bjo-Xf-hpq.placeholder" = "email";
+
+/* Class = "UILabel"; text = "Tu banco informa que la transacción se ha realizado de forma correcta y sin problemas. que la transacción se ha realizado de forma correcta y sin problemas"; ObjectID = "CaG-zX-Azg"; */
+"CaG-zX-Azg.text" = "Tu banco informa que la transacción se ha realizado de forma correcta y sin problemas. que la transacción se ha realizado de forma correcta y sin problemas";
+
+/* Class = "UILabel"; text = "Mensaje Banco"; ObjectID = "Ijb-GK-JT5"; */
+"Ijb-GK-JT5.text" = "Mensaje Banco";
+
+/* Class = "UITextField"; text = "BANCO DE CREDITO E INVERSIONES"; ObjectID = "Jv5-AZ-SvD"; */
+"Jv5-AZ-SvD.text" = "BANCO DE CREDITO E INVERSIONES";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LAq-4u-y4y"; */
+"LAq-4u-y4y.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "Lzk-lQ-UPi"; */
+"Lzk-lQ-UPi.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "Info"; ObjectID = "OoH-uu-hUR"; */
+"OoH-uu-hUR.text" = "Info";
+
+/* Class = "UIButton"; normalTitle = "A+"; ObjectID = "Pos-2f-Dsf"; */
+"Pos-2f-Dsf.normalTitle" = "A+";
+
+/* Class = "UILabel"; text = "Cupertino"; ObjectID = "Skv-tV-cCT"; */
+"Skv-tV-cCT.text" = "Cupertino";
+
+/* Class = "UIButton"; normalTitle = "Update Terminal"; ObjectID = "XDt-Fv-Iod"; */
+"XDt-Fv-Iod.normalTitle" = "Update Terminal";
+
+/* Class = "UIButton"; normalTitle = "A-"; ObjectID = "YLk-Ql-C2n"; */
+"YLk-Ql-C2n.normalTitle" = "A-";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Ygm-K7-lZP"; */
+"Ygm-K7-lZP.text" = "Title";
+
+/* Class = "UILabel"; text = "A4"; ObjectID = "ZaN-IE-Wci"; */
+"ZaN-IE-Wci.text" = "A4";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "aZJ-np-I1v"; */
+"aZJ-np-I1v.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Cambiar banco"; ObjectID = "bYP-a7-8Ad"; */
+"bYP-a7-8Ad.normalTitle" = "Cambiar banco";
+
+/* Class = "UILabel"; text = "Guardar mis credenciales"; ObjectID = "cVi-5J-5Wb"; */
+"cVi-5J-5Wb.text" = "Guardar mis credenciales";
+
+/* Class = "UIButton"; normalTitle = "Hide"; ObjectID = "gPI-Ja-vfq"; */
+"gPI-Ja-vfq.normalTitle" = "Hide";
+
+/* Class = "UILabel"; text = "Preparando conexión"; ObjectID = "lyi-vx-qlI"; */
+"lyi-vx-qlI.text" = "Preparando conexión";
+
+/* Class = "UILabel"; text = "C6"; ObjectID = "nf5-mZ-B07"; */
+"nf5-mZ-B07.text" = "C6";
+
+/* Class = "UILabel"; text = "Bill description"; ObjectID = "nz2-f4-x5b"; */
+"nz2-f4-x5b.text" = "Bill description";
+
+/* Class = "UILabel"; text = "Bill description"; ObjectID = "pwb-IX-oI8"; */
+"pwb-IX-oI8.text" = "Bill description";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "q2V-wg-n4o"; */
+"q2V-wg-n4o.text" = "Label";
+
+/* Class = "UILabel"; text = "Descripción del pago"; ObjectID = "qbY-uF-NYy"; */
+"qbY-uF-NYy.text" = "Descripción del pago";
+
+/* Class = "UILabel"; text = "B5"; ObjectID = "t4c-It-4zw"; */
+"t4c-It-4zw.text" = "B5";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zNI-NB-Y8U"; */
+"zNI-NB-Y8U.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Continue"; ObjectID = "zNP-4r-tI9"; */
+"zNP-4r-tI9.title" = "Continue";

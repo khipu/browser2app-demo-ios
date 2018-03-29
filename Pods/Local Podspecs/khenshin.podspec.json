@@ -1,0 +1,52 @@
+{
+  "name": "khenshin",
+  "version": "1.229",
+  "summary": "khenshin es el músculo para realizar el proceso de pago dentro de cada Medio de Pago soportado.",
+  "description": "khenshin es el músculo para realizar el proceso de pago dentro de cada Medio de Pago soportado. With a little bit more salt than summary.",
+  "homepage": "https://khipu.com",
+  "license": {
+    "type": "Copyright",
+    "text": "      Copyright 2016 khipu SpA. All rights reserved.\n"
+  },
+  "authors": {
+    "Khipu SpA": "support@khipu.com"
+  },
+  "platforms": {
+    "ios": null
+  },
+  "source": {
+    "git": "https://bitbucket.org/khipu/khenshin-pod.git",
+    "tag": "1.229"
+  },
+  "vendored_frameworks": "Products/khenshin.framework",
+  "resources": "Products/khenshin.bundle",
+  "libraries": "xml2",
+  "requires_arc": true,
+  "xcconfig": {
+    "LIBRARY_SEARCH_PATHS": "\"$(PODS_ROOT)/khenshin\"",
+    "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/Headers/khenshin\""
+  },
+  "dependencies": {
+    "AFNetworking": [
+      "3.1.0"
+    ],
+    "IQKeyboardManager": [
+      "5.0.3"
+    ],
+    "JSONModel": [
+      "1.7.0"
+    ],
+    "PPTopMostController": [
+      "0.0.1"
+    ],
+    "RaptureXML": [
+      "1.0.1"
+    ],
+    "TTTAttributedLabel": [
+      "2.0.0"
+    ],
+    "Toast": [
+      "3.1.0"
+    ]
+  }
+}
