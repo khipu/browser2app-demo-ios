@@ -33,9 +33,11 @@ Los pasos necesarios para utilizar la biblioteca nativa iOS para Browser2app son
 ## Cocoapod
 Para instalar khenshin en tu proyecto es necesario utilizar cocoapods.
 > **Archivo Podfile**  
-> pod 'khenshin', :git => 'https://bitbucket.org/khipu/khenshin-pod.git', :tag => '1.40'
+> pod 'khenshin', :git => 'https://bitbucket.org/khipu/khenshin-pod.git', :tag => '1.239'
 
 *Importante* **use_frameworks!**
+
+La versión 1.239 corresponde a Abril de 2018. Puede consultar por la última versión al correo soporte@khipu.com.
 
 ## Add -Objc  
 Valida que tu proyecto tenga configurada la bandera -Objc
